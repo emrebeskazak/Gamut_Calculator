@@ -1,0 +1,9 @@
+Diagram 
+    {OK} referans renk uzayı (BT.2020, NTCS vb.)
+    örnek gamutu
+        spectrumdan 3 nokta ve bezay noktası 
+        spektrum + LCD filtreden 3 nokta ve beyaz noktası
+        {OK} Elle girilen değerler 
+örnek gamutu ve renk uzayının alanları oranı
+örnek gamutu ve renk uzayının kesişen alanları oranı
+
