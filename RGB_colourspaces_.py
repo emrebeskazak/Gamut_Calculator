@@ -34,4 +34,10 @@ print(RGB_COLOURSPACE_NTSC1953.primaries)
 # ~colour.RGB_Colourspace.use_derived_matrix_RGB_to_XYZ
 # ~colour.RGB_Colourspace.use_derived_matrix_XYZ_to_RGB
 
+# Plot fonksiyonları tek tek elemanlara ulaşarak kullanmayı gerektirmiyor.
+# Onun yerine RGB_COLORSPACES diye bir dictionary içinden kendisi otomatik çekiyor.
+# Örneğin aşağıdaki "sRGB" keyi RBG_COLOURSPACE_sRGB objesini (<RGB_Colourspaces> sınıfı) çağırıyor.
+
+from colour.models.rgb.datasets import RGB_COLOURSPACES
+print(type(RGB_COLOURSPACES["sRGB"]))
 

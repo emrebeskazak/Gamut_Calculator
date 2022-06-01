@@ -34,4 +34,3 @@ print(RGB_COLOURSPACE_NTSC1953.primaries)
 
 # 3 boyutlu çizdiriyor
 # plot_RGB_colourspaces_gamuts(['ITU-R BT.709', 'ACEScg', 'S-Gamut'])
-
