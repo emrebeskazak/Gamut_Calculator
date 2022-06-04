@@ -27,8 +27,8 @@ import colour
 # # print(RGB)
 # plot_RGB_chromaticities_in_chromaticity_diagram_CIE1931(RGB, colourspaces=['ACEScg', 'S-Gamut', 'Pointer Gamut'])
 
-from colour.models import RGB_COLOURSPACE_sRGB, RGB_COLOURSPACE_BT2020, RGB_COLOURSPACE_NTSC1953
-print(RGB_COLOURSPACE_NTSC1953.primaries)
+# from colour.models import RGB_COLOURSPACE_sRGB, RGB_COLOURSPACE_BT2020, RGB_COLOURSPACE_NTSC1953
+# print(RGB_COLOURSPACE_NTSC1953.primaries)
 # prng = np.random.RandomState(2)
 # colour.RGB_colourspace_pointer_gamut_coverage_MonteCarlo(RGB_COLOURSPACE_sRGB, 10e3, random_state=prng)
 

@@ -4,6 +4,6 @@ Diagram
         {OK} spectrumdan 3 nokta ve bezay noktası 
         spektrum + LCD filtreden 3 nokta ve beyaz noktası
         {OK} Elle girilen değerler 
-örnek gamutu ve renk uzayının alanları oranı
-örnek gamutu ve renk uzayının kesişen alanları oranı
+{OK} örnek gamutu ve renk uzayının alanları oranı
+{OK} örnek gamutu ve renk uzayının kesişen alanları oranı
 

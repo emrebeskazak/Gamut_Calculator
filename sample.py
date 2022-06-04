@@ -1,9 +1,7 @@
 import numpy as np
 from colour.models.rgb import (
     RGB_Colourspace,
-    normalised_primary_matrix,
-    eotf_inverse_BT2020,
-    eotf_BT2020,
+    normalised_primary_matrix
 )
 from colour.models import XYZ_to_xy
 from colour.colorimetry import (
@@ -17,17 +15,17 @@ from colour.colorimetry import (
 import os
 import glob
 
-file_path = os.path.join(os.path.dirname(__file__), 'samples', 'sample1.*')
+# file_path = os.path.join(os.path.dirname(__file__), 'samples', 'sample1.*')
 
-for file_path_ext in glob.glob(file_path) :
-    with open(file_path_ext, "r") as file :
-        pass
+# for file_path_ext in glob.glob(file_path) :
+#     with open(file_path_ext, "r") as file :
+#         pass
 
 
 class RGB_primaries:
     def __init__(self):
         self.user_RGB_primaries()
-        self.file_RGB_primaries()
+        # self.file_RGB_primaries()
     
     # DOSYADAN OKUYUP KOORDİNAT HESAPLAYAN METHOD ###############
     def file_RGB_primaries(self):
