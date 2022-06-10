@@ -10,6 +10,7 @@ from colour.models.rgb import (
     RGB_COLOURSPACE_BT2020,
     RGB_COLOURSPACE_sRGB,
 )
+# print(RGB_COLOURSPACE_NTSC1953.primaries)
 
 # ******** Areas_Colourspaces dict'te kaydetmek için bir seferlik alan hesaplamada kullanılmış kod.
 # ******** colour kütüphanesinden yeni renk uzayı eklenip hesaplatılabilir.
@@ -29,11 +30,11 @@ from colour.models.rgb import (
 # ******** Areas_Colourspaces dict'te kaydetmek için bir seferlik alan hesaplamada kullanılmış kod
 
 Areas_Colourspaces ={
-    "BT.2020"   : 0.2118665,
-    "NTCS1953"  : 0.1582,
-    "sRGB"      : 0.11205,
-    "Adobe RGB" : 0.15115,
-    "Apple RGB" : 0.1065
+    "ITU-R BT.2020"    : 0.2118665,
+    "NTSC (1953)"      : 0.1582,
+    "sRGB"             : 0.11205,
+    'adobe1998'        : 0.15115,
+    "Apple RGB"        : 0.1065
 }
 
 # # ******* Standart Renk uzaylarının içindeki noktaları tespit etmek için tek seferlik kullanılan kod

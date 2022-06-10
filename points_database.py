@@ -12460,3 +12460,10 @@ Adobe_RGB_1998_points = np.array(
 	]
 )
 
+Points_Colourspaces = {
+    "ITU-R BT.2020"    : BT2020_points,
+    "NTSC (1953)"      : NTSC1953_points,
+    "sRGB"             : sRGB_points,
+    'adobe1998'        : Adobe_RGB_1998_points,
+    "Apple RGB"        : AppleRGB_points
+}

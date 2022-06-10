@@ -23,9 +23,9 @@ import glob
 
 
 class RGB_primaries:
-    def __init__(self):
-        self.user_RGB_primaries()
-        # self.file_RGB_primaries()
+    # def __init__(self):
+    #     self.user_RGB_primaries()
+    #     # self.file_RGB_primaries()
     
     # DOSYADAN OKUYUP KOORDİNAT HESAPLAYAN METHOD ###############
     def file_RGB_primaries(self):
@@ -103,7 +103,7 @@ class RGB_primaries:
         """*CIE XYZ* tristimulus values to *SAMPLE* colourspace matrix."""
 
         # Değerlerle RGB_Colourspace sınıfı yeni bir obje oluşturma -------#
-        self.RGB_COLOURSPACE_SAMPLE_data = RGB_Colourspace(
+        self.RGB_COLOURSPACE_SAMPLE = RGB_Colourspace(
             "Sample_data",
             PRIMARIES_SAMPLE,
             CCS_WHITEPOINT_SAMPLE,
@@ -115,22 +115,27 @@ class RGB_primaries:
     # DOSYADAN OKUYUP KOORDİNAT HESAPLAYAN METHOD ###############
 
     # DIŞARIDAN ELLE GİRİLEN DEĞERLERİ ALAN METHOD ################################################
-    def user_RGB_primaries(self):
+    def user_RGB_primaries(
+        self,
+        PRIMARIES_SAMPLE,
+        CCS_WHITEPOINT_SAMPLE,# = np.array([0,0]),
+        WHITEPOINT_NAME_SAMPLE = "Sample"
+        ):
 
-        PRIMARIES_SAMPLE = np.array(
-            [
-                [0.6717, 0.3147],   #R
-                [0.2912, 0.6625],   #G
-                [0.1573, 0.0560],   #B
-            ]
-        )
-        """*SAMPLE* colourspace primaries."""
+        # PRIMARIES_SAMPLE = np.array(
+        #     [
+        #         [0.6717, 0.3147],   #R
+        #         [0.2912, 0.6625],   #G
+        #         [0.1573, 0.0560],   #B
+        #     ]
+        # )
+        # """*SAMPLE* colourspace primaries."""
 
-        WHITEPOINT_NAME_SAMPLE: str = "SAMPLE_user"
-        """*SAMPLE* colourspace whitepoint name."""
+        # WHITEPOINT_NAME_SAMPLE: str = "SAMPLE_user"
+        # """*SAMPLE* colourspace whitepoint name."""
 
-        CCS_WHITEPOINT_SAMPLE = np.array([0.3102, 0.3056])
-        """*SAMPLE* colourspace whitepoint chromaticity coordinates."""
+        # CCS_WHITEPOINT_SAMPLE = np.array([0.3102, 0.3056])
+        # """*SAMPLE* colourspace whitepoint chromaticity coordinates."""
 
         MATRIX_SAMPLE_TO_XYZ = normalised_primary_matrix(
             PRIMARIES_SAMPLE, CCS_WHITEPOINT_SAMPLE
@@ -141,11 +146,11 @@ class RGB_primaries:
         """*CIE XYZ* tristimulus values to *SAMPLE* colourspace matrix."""
 
         # Değerlerle RGB_Colourspace sınıfı yeni bir obje oluşturma -------#
-        self.RGB_COLOURSPACE_SAMPLE_user = RGB_Colourspace(
-            "Sample_user",
-            PRIMARIES_SAMPLE,
-            CCS_WHITEPOINT_SAMPLE,
-            WHITEPOINT_NAME_SAMPLE
+        self.RGB_COLOURSPACE_SAMPLE = RGB_Colourspace(
+            name = WHITEPOINT_NAME_SAMPLE,
+            primaries = PRIMARIES_SAMPLE,
+            whitepoint = CCS_WHITEPOINT_SAMPLE,
+            whitepoint_name = WHITEPOINT_NAME_SAMPLE
         )
         #------------------------------------------------------------------#
     # DIŞARIDAN ELLE GİRİLEN DEĞERLERİ ALAN METHOD #################################################
