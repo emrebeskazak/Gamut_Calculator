@@ -7,377 +7,784 @@
     <x>0</x>
     <y>0</y>
     <width>1091</width>
-    <height>816</height>
+    <height>908</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Gamut Calculator</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.jpg</normaloff>icon.jpg</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pB_calculate">
+   <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
-      <x>860</x>
-      <y>690</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Calculate</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="cb_bt2020">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>40</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>BT.2020</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="cb_ntcs1953">
-    <property name="geometry">
-     <rect>
-      <x>690</x>
-      <y>50</y>
-      <width>101</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>NTSC 1953</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="cb_srgb">
-    <property name="geometry">
-     <rect>
-      <x>800</x>
-      <y>50</y>
-      <width>81</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>sRGB</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="cb_adobe">
-    <property name="geometry">
-     <rect>
-      <x>870</x>
-      <y>50</y>
-      <width>101</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Adobe RGB</string>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="groupBox">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>160</y>
-      <width>391</width>
-      <height>311</height>
+      <x>30</x>
+      <y>20</y>
+      <width>501</width>
+      <height>691</height>
      </rect>
     </property>
     <property name="title">
-     <string>Sample CIE xy Coordinates</string>
+     <string>Sample</string>
     </property>
-    <property name="checkable">
-     <bool>false</bool>
-    </property>
-    <widget class="QTableWidget" name="tW_sample">
+    <widget class="QGroupBox" name="groupBox">
      <property name="enabled">
       <bool>true</bool>
      </property>
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>60</y>
-       <width>321</width>
-       <height>201</height>
+       <x>50</x>
+       <y>130</y>
+       <width>381</width>
+       <height>261</height>
       </rect>
      </property>
-     <property name="acceptDrops">
+     <property name="title">
+      <string>Sample CIE xy Coordinates</string>
+     </property>
+     <property name="checkable">
       <bool>false</bool>
      </property>
-     <property name="inputMethodHints">
-      <set>Qt::ImhNone</set>
+     <widget class="QTableWidget" name="tW_sample">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>321</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="dragEnabled">
+       <bool>false</bool>
+      </property>
+      <row>
+       <property name="text">
+        <string>Red</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Green</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Blue</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>White</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>x</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>y</string>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="1" column="1">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="2" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="2" column="1">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="3" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="3" column="1">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>30</y>
+       <width>381</width>
+       <height>71</height>
+      </rect>
      </property>
-     <property name="dragEnabled">
-      <bool>false</bool>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>24</number>
+      </property>
+      <property name="rightMargin">
+       <number>40</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_sample_name">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Sample Name:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="le_sample_name">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QRadioButton" name="rB_table_s">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>240</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
      </property>
-     <row>
-      <property name="text">
-       <string>Red</string>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rB_file_s">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>550</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_import_sample">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>450</y>
+       <width>381</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Import Data Files</string>
+     </property>
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>361</width>
+        <height>81</height>
+       </rect>
       </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>Green</string>
+      <property name="title">
+       <string>Spectrum File</string>
       </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>Blue</string>
+      <widget class="QPushButton" name="pb_browse_sample">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>30</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_browse_sample">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>221</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_sample_filter">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>120</y>
+        <width>361</width>
+        <height>81</height>
+       </rect>
       </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>White</string>
+      <property name="title">
+       <string>Cell Filter File</string>
       </property>
-     </row>
-     <column>
-      <property name="text">
-       <string>x</string>
+      <property name="checkable">
+       <bool>true</bool>
       </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>y</string>
+      <property name="checked">
+       <bool>false</bool>
       </property>
-     </column>
-     <item row="0" column="0">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="0" column="1">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="1" column="0">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="1" column="1">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="2" column="0">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="2" column="1">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="3" column="0">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="3" column="1">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
+      <widget class="QPushButton" name="pb_browse_sample_filter">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>30</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_browse_sample_filter">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>221</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>410</y>
+       <width>461</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>OR</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>420</y>
+       <width>118</width>
+       <height>3</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_2">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>420</y>
+       <width>118</width>
+       <height>3</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="groupBox_2">
+   <widget class="QGroupBox" name="groupBox_4">
     <property name="geometry">
      <rect>
-      <x>590</x>
-      <y>160</y>
-      <width>391</width>
-      <height>311</height>
+      <x>560</x>
+      <y>20</y>
+      <width>501</width>
+      <height>691</height>
      </rect>
     </property>
     <property name="title">
-     <string>Reference CIE xy Coordinates</string>
+     <string>Reference</string>
     </property>
-    <widget class="QTableWidget" name="tW_reference">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>130</y>
+       <width>381</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Reference CIE xy Coordinates</string>
+     </property>
+     <widget class="QTableWidget" name="tW_reference">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>321</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="dragEnabled">
+       <bool>false</bool>
+      </property>
+      <row>
+       <property name="text">
+        <string>Red</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Green</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Blue</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>White</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>x</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>y</string>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="1" column="1">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="2" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="2" column="1">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="3" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="3" column="1">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QRadioButton" name="rB_table_r">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>260</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rB_file_r">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>560</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Line" name="line_4">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>420</y>
+       <width>118</width>
+       <height>3</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>410</y>
+       <width>461</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>OR</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="Line" name="line_3">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>420</y>
+       <width>118</width>
+       <height>3</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_import_reference">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>450</y>
+       <width>381</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Import Data Files</string>
+     </property>
+     <widget class="QGroupBox" name="groupBox_10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>361</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Spectrum File</string>
+      </property>
+      <widget class="QPushButton" name="pb_browse_reference">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>30</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_browse_reference">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>221</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_reference_filter">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>120</y>
+        <width>361</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Cell Filter File</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <widget class="QPushButton" name="pb_browse_reference_filter">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>30</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_browse_reference_filter">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>221</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>30</y>
+       <width>381</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QCheckBox" name="cb_bt2020">
+        <property name="text">
+         <string>BT.2020</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="cb_ntcs1953">
+        <property name="text">
+         <string>NTSC 1953</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="cb_adobe">
+        <property name="text">
+         <string>Adobe RGB</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="cb_srgb">
+        <property name="text">
+         <string>sRGB</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>60</y>
+       <width>381</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <property name="rightMargin">
+       <number>39</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_reference_name">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Reference Name:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="le_reference_name">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_12">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>730</y>
+      <width>351</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Results:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QTextBrowser" name="textBrowser">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>60</y>
-       <width>321</width>
-       <height>201</height>
+       <y>30</y>
+       <width>291</width>
+       <height>81</height>
       </rect>
      </property>
-     <property name="acceptDrops">
-      <bool>false</bool>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
      </property>
-     <property name="inputMethodHints">
-      <set>Qt::ImhNone</set>
-     </property>
-     <property name="dragEnabled">
-      <bool>false</bool>
-     </property>
-     <row>
-      <property name="text">
-       <string>Red</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>Green</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>Blue</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>White</string>
-      </property>
-     </row>
-     <column>
-      <property name="text">
-       <string>x</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>y</string>
-      </property>
-     </column>
-     <item row="0" column="0">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="0" column="1">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="1" column="0">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="1" column="1">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="2" column="0">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="2" column="1">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="3" column="0">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="3" column="1">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
     </widget>
    </widget>
-   <widget class="QLineEdit" name="le_reference_name">
+   <widget class="QGroupBox" name="groupBox_6">
     <property name="geometry">
      <rect>
       <x>760</x>
-      <y>96</y>
-      <width>201</width>
-      <height>31</height>
+      <y>730</y>
+      <width>301</width>
+      <height>131</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>9</pointsize>
-     </font>
+    <property name="title">
+     <string>Calculate</string>
     </property>
-   </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>60</y>
-      <width>391</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <property name="spacing">
-      <number>24</number>
+    <widget class="QRadioButton" name="rb_1976">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>30</y>
+       <width>95</width>
+       <height>20</height>
+      </rect>
      </property>
-     <property name="rightMargin">
-      <number>69</number>
+     <property name="text">
+      <string>CIE1976 uv</string>
      </property>
-     <item>
-      <widget class="QLabel" name="label_sample_name">
-       <property name="font">
-        <font>
-         <pointsize>9</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Sample Name:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="le_sample_name">
-       <property name="font">
-        <font>
-         <pointsize>9</pointsize>
-        </font>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QLabel" name="label_reference_name">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>80</y>
-      <width>131</width>
-      <height>69</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Reference Name:</string>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>650</y>
-      <width>291</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
+    </widget>
+    <widget class="QRadioButton" name="rb_1931">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>30</y>
+       <width>95</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CIE1931 xy</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pB_calculate">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>70</y>
+       <width>121</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Calculate</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
