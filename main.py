@@ -5,6 +5,8 @@ from Gamut import Ui_MainWindow
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QTableWidgetItem, QFileDialog
 from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtGui import QIcon
 # from PyQt5.Qt import Qt, QApplication, QClipboard
 
 import numpy as np
@@ -59,7 +61,21 @@ class Gamut_win(QtWidgets.QMainWindow):
         self.ui.rb_1931.toggled.connect(self.f_1931)
         self.ui.rb_1976.toggled.connect(self.f_1976)
         self.xy = True
+        self.ui.actionAbout.triggered.connect(self.about)
 
+    def about(self):
+        msg = QtWidgets.QMessageBox()
+        msg.setTextFormat(Qt.RichText)  
+        # msg.about(self, "About", "Gamut Calculator\nVersion: 1.0\n\nNo rights reserved at all cCc\n<a href='http://google.com/'>Google</a>")
+        icon = QIcon()
+        icon.addPixmap(QPixmap("icon.jpg"), QIcon.Normal, QIcon.Off)
+        msg.setWindowIcon(icon)
+        msg.setWindowTitle("About")
+        msg.setIconPixmap(QPixmap("icon.jpg"))
+        msg.setText('<p><span style="color:#0000a0"><span style="font-size:22px">Gamut Calculator</span></span><br><span style="font-size:15px">Version 1.0</span></p><p><span style="font-size:15px">Written in Python by using open source modules <br>by <br>Emre Beşkazak</span></p><p><span style="font-size:15px">Source code:</span><br><a href="https://github.com/emrebeskazak/Gamut_Calculator">GitHub</a></p>')
+        x = msg.exec_()
+              
+    
     def f_browse_sample(self):
         self.ui.le_browse_sample.setText(QFileDialog.getOpenFileName()[0])
     def f_browse_reference(self):

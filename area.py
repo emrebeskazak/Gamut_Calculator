@@ -44,29 +44,9 @@ def sample_area(colourspace, xy_bool):
     G_y2 = G[1]
     B_x3 = B[0]
     B_y3 = B[1]
-    # R_x1 = colourspace.primaries[0][0]
-    # R_y1 = colourspace.primaries[0][1]
-    # G_x2 = colourspace.primaries[1][0]
-    # G_y2 = colourspace.primaries[1][1]
-    # B_x3 = colourspace.primaries[2][0]
-    # B_y3 = colourspace.primaries[2][1]
 
     Area = (abs( (R_x1*G_y2 + G_x2*B_y3 + B_x3*R_y1) - (G_x2*R_y1 + B_x3*G_y2 + R_x1*B_y3) ))/2
     return Area
-
-# def sample_area_uv(colourspace):
-#     R = xy_to_Luv_uv(colourspace.primaries[0])
-#     G = xy_to_Luv_uv(colourspace.primaries[1])
-#     B = xy_to_Luv_uv(colourspace.primaries[2])
-#     R_x1 = R[0]
-#     R_y1 = R[1]
-#     G_x2 = G[0]
-#     G_y2 = G[1]
-#     B_x3 = B[0]
-#     B_y3 = B[1]
-
-#     Area = (abs( (R_x1*G_y2 + G_x2*B_y3 + B_x3*R_y1) - (G_x2*R_y1 + B_x3*G_y2 + R_x1*B_y3) ))/2
-#     return Area
 
 def sample_points(colourspace, xy_bool):
     if xy_bool:
