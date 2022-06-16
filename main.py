@@ -565,9 +565,9 @@ class Gamut_win(QtWidgets.QMainWindow):
 
         # Results text
         if self.xy:
-            self.ui.textBrowser.setText(f"in CIE 1931 (xy) colorspace\nArea ratio: %{self.ratio}\nCoverage: %{self.coverage}")
+            self.ui.textBrowser.setText(f"in CIE 1931 (xy) colorspace\nAreas ratio: %{self.ratio}\nCoverage: %{self.coverage}")
         else:
-            self.ui.textBrowser.setText(f"in CIE 1976 (uv) colorspace\nArea ratio: %{self.ratio}\nCoverage: %{self.coverage}")
+            self.ui.textBrowser.setText(f"in CIE 1976 (uv) colorspace\nAreas ratio: %{self.ratio}\nCoverage: %{self.coverage}")
 
         # Plot colourspace diagrams
         if self.reference_RGBcolourspace == "NTSC (1953)":

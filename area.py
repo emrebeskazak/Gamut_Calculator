@@ -49,6 +49,8 @@ def sample_area(colourspace, xy_bool):
     return Area
 
 def sample_points(colourspace, xy_bool):
+    # Reference:
+    # https://umitsen.wordpress.com/2013/04/07/nokta-ucgenin-icinde-mi-degil-mi-test-etme/
     if xy_bool:
         R = colourspace.primaries[0]
         G = colourspace.primaries[1]
