@@ -2145,3 +2145,8 @@ dist/Gamut Calculator/wheel-0.37.1.dist-info/REQUESTED
 dist/Gamut Calculator/wheel-0.37.1.dist-info/top_level.txt
 dist/Gamut Calculator/wheel-0.37.1.dist-info/WHEEL
 options.spec
+dist/Gamut Calculator/importance of filter/filtered_vs_unfiltered.txt
+dist/Gamut Calculator/importance of filter/filtered.png
+dist/Gamut Calculator/importance of filter/not_filtered.png
+dist/Gamut Calculator/samples/sample.csv
+dist/Gamut Calculator/samples/sample.IRR
