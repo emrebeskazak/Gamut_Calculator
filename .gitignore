@@ -2152,3 +2152,9 @@ dist/Gamut Calculator/samples/sample.csv
 dist/Gamut Calculator/samples/sample.IRR
 dist/Gamut Calculator.zip
 LCD_filter/T1004-P3 32inch FHD CELL CF.XLSX
+samples/E06.IRR
+Bugs_and_issues.txt
+__pycache__/area.cpython-310.pyc
+__pycache__/Gamut.cpython-310.pyc
+__pycache__/sample.cpython-310.pyc
+
