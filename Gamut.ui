@@ -211,7 +211,7 @@
       <rect>
        <x>50</x>
        <y>450</y>
-       <width>381</width>
+       <width>441</width>
        <height>221</height>
       </rect>
      </property>
@@ -295,6 +295,38 @@
         </rect>
        </property>
       </widget>
+     </widget>
+     <widget class="QPushButton" name="pB_spectrum">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>100</y>
+        <width>51</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>spectrum_icon_2.png</normaloff>spectrum_icon_2.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
      </widget>
     </widget>
     <widget class="QLabel" name="label">
