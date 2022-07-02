@@ -1,6 +1,7 @@
+from turtle import color
 import numpy as np
 import pandas as pd
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 from colour.models.rgb import (
     RGB_Colourspace,
     normalised_primary_matrix
@@ -12,7 +13,12 @@ from colour.colorimetry import (
     sd_to_XYZ_integration, 
     sd_to_XYZ_ASTME308, 
     sd_to_XYZ_tristimulus_weighting_factors_ASTME308,
-    sd_gaussian_fwhm
+    sd_gaussian_fwhm,
+
+)
+from colour.plotting import (
+    plot_single_sd,
+    plot_multi_sds
 )
 # import os
 # import glob
@@ -34,7 +40,9 @@ class RGB_primaries:
         file_path,
         WHITEPOINT_NAME,
         filter_path,
-        filter_bool
+        filter_bool,
+        is_sample,
+        spectrum_bool
         ):
         def data_to_xy(min = 360, max = 780):
             line_number = 0
@@ -83,6 +91,7 @@ class RGB_primaries:
             # data_sd_to_np = np.array([data_sd.wavelengths, data_sd.values])
             # print(data_sd_to_np.transpose())
             w_XYZ = sd_to_XYZ_integration(data_sd)
+
             return XYZ_to_xy(w_XYZ), data_sd
 
         def filter_to_xy():
@@ -120,12 +129,14 @@ class RGB_primaries:
             g_xy = XYZ_to_xy(sd_to_XYZ_integration(blu_cf_g_sd))
             b_xy = XYZ_to_xy(sd_to_XYZ_integration(blu_cf_b_sd))
 
-            
+            if is_sample and spectrum_bool:
+                axs[1].plot(blu_cf_r_sd.wavelengths, blu_cf_r_sd.values, color="red")
+                axs[1].plot(blu_cf_g_sd.wavelengths, blu_cf_g_sd.values, color="green")
+                axs[1].plot(blu_cf_b_sd.wavelengths, blu_cf_b_sd.values, color="blue")
+                axs[1].set_title("R, G, B Cell Filtered BLU Spectra")
+                plt.tight_layout()
 
-            # plt.plot(blu_cf_r_sd.wavelengths, blu_cf_r_sd.values)
-            # plt.plot(blu_cf_g_sd.wavelengths, blu_cf_g_sd.values)
-            # plt.plot(blu_cf_b_sd.wavelengths, blu_cf_b_sd.values)
-            # plt.show()
+                plot_single_sd(blu_cf_w_sd, standalone = False)
 
             return w_xy, r_xy, g_xy, b_xy
 
@@ -143,8 +154,18 @@ class RGB_primaries:
             self.g_xy, g_sd_BLU = data_to_xy(min=490, max=578)
             self.r_xy, r_sd_BLU = data_to_xy(min=578)
         if filter_bool and filter_path != "":
+            if is_sample and spectrum_bool:
+                fig, axs = plt.subplots(2)
+                axs[0].plot(self.w_sd_BLU.wavelengths, self.w_sd_BLU.values)
+                axs[0].set_title("Back Light Unit Spectrum")
+                axs[0].set_xlim(350, 800)
             self.w_xy, self.r_xy, self.g_xy, self.b_xy = filter_to_xy()
-            
+        elif is_sample and spectrum_bool:
+            plt.plot(self.w_sd_BLU.wavelengths, self.w_sd_BLU.values)
+            plt.title("Back Light Unit Spectrum")
+            plt.xlim(350, 800)
+
+        
         
         # *** GAUSSIAN SD
         # sd_g_gauss = sd_gaussian_fwhm(525.8, 23.6)
