@@ -134,6 +134,8 @@ class RGB_primaries:
                 axs[1].plot(blu_cf_g_sd.wavelengths, blu_cf_g_sd.values, color="green")
                 axs[1].plot(blu_cf_b_sd.wavelengths, blu_cf_b_sd.values, color="blue")
                 axs[1].set_title("R, G, B Cell Filtered BLU Spectra")
+                axs[1].set_xlabel("Wavelength (nm)")
+                axs[1].set_ylabel("Intensity (a. u.)")
                 plt.tight_layout()
 
                 plot_single_sd(blu_cf_w_sd, standalone = False)
@@ -159,11 +161,15 @@ class RGB_primaries:
                 axs[0].plot(self.w_sd_BLU.wavelengths, self.w_sd_BLU.values)
                 axs[0].set_title("Back Light Unit Spectrum")
                 axs[0].set_xlim(350, 800)
+                axs[0].set_xlabel("Wavelength (nm)")
+                axs[0].set_ylabel("Intensity (a. u.)")
             self.w_xy, self.r_xy, self.g_xy, self.b_xy = filter_to_xy()
         elif is_sample and spectrum_bool:
             plt.plot(self.w_sd_BLU.wavelengths, self.w_sd_BLU.values)
             plt.title("Back Light Unit Spectrum")
             plt.xlim(350, 800)
+            plt.xlabel("Wavelength (nm)")
+            plt.ylabel("Intensity (a. u.)")
 
         
         
