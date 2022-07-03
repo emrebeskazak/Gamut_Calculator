@@ -119,7 +119,7 @@ class RGB_primaries:
             blu_cf_g = self.w_sd_BLU.align(cf_g_sd.shape).normalise().values * cf_g_sd.normalise().values
             blu_cf_b = self.w_sd_BLU.align(cf_b_sd.shape).normalise().values * cf_b_sd.normalise().values
             # Cell Filtered SDs
-            blu_cf_w_sd = SpectralDistribution(pd.Series(data= blu_cf_w, index = cf_w_sd.wavelengths))
+            blu_cf_w_sd = SpectralDistribution(pd.Series(data= blu_cf_w, index = cf_w_sd.wavelengths), name = "White Cell Filtered BLU Spectrum")
             blu_cf_r_sd = SpectralDistribution(pd.Series(data= blu_cf_r, index = cf_r_sd.wavelengths))
             blu_cf_g_sd = SpectralDistribution(pd.Series(data= blu_cf_g, index = cf_g_sd.wavelengths))
             blu_cf_b_sd = SpectralDistribution(pd.Series(data= blu_cf_b, index = cf_b_sd.wavelengths))
